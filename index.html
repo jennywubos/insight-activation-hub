@@ -94,9 +94,23 @@
       padding: 44px 48px 40px;
     }
     .hero-inner { padding: 0; }
+    .hero-title-row {
+      display: flex; align-items: baseline;
+      flex-wrap: wrap; gap: 16px; margin-bottom: 9px;
+    }
     .hero-title {
       font-size: 30px; font-weight: 800; color: #fff;
-      letter-spacing: -0.8px; margin-bottom: 9px; line-height: 1.15;
+      letter-spacing: -0.8px; line-height: 1.15;
+    }
+    .hero-credit {
+      font-size: 18px; font-weight: 400; color: #6BA8E8;
+      line-height: 1.5;
+    }
+    .hero-credit a {
+      color: #6BA8E8; text-decoration: none;
+    }
+    .hero-credit a:hover {
+      color: #8BBDF0; text-decoration: underline;
     }
     .hero-sub {
       font-size: 14.5px; color: rgba(255,255,255,.58);
@@ -721,7 +735,10 @@
 <section id="library" class="section">
   <div class="hero">
     <div class="hero-inner">
-      <h1 class="hero-title">Insight Activation Hub</h1>
+      <div class="hero-title-row">
+        <h1 class="hero-title">Insight Activation Hub</h1>
+        <span class="hero-credit">| Builder: Jenny Wu · <a href="mailto:JennyWuBos@gmail.com">JennyWuBos@gmail.com</a></span>
+      </div>
       <p class="hero-sub">Research insights, activated — evidence-backed answers for product decisions</p>
       <div class="hero-stats">
         <div class="hero-stat">
