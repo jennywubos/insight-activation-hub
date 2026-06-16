@@ -113,7 +113,7 @@
       color: #8BBDF0; text-decoration: underline;
     }
     .hero-cols {
-      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      display: grid; grid-template-columns: 1fr 1fr;
       gap: 32px; align-items: start;
       margin: 18px 0 28px;
     }
@@ -753,13 +753,15 @@
         <span class="hero-credit">| Builder: Jenny Wu · <a href="mailto:JennyWuBos@gmail.com">JennyWuBos@gmail.com</a></span>
       </div>
       <div class="hero-cols">
-        <div class="hero-col">
-          <div class="hero-col-label">Problem</div>
-          <div class="hero-col-body">Research insights are trapped in scattered reports (Word/PDF/PPT), while product teams can't easily find them, trust them, and use them.</div>
-        </div>
-        <div class="hero-col">
-          <div class="hero-col-label">Goal</div>
-          <div class="hero-col-body">Activate those insights into a queryable, confidence-graded research asset library that drops straight into a PRD, so product decisions are grounded in evidence.</div>
+        <div class="hero-col" style="display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <div class="hero-col-label">Problem</div>
+            <div class="hero-col-body">Research insights are trapped in scattered reports (Word/PDF/PPT), while product teams can't easily find them, trust them, and use them.</div>
+          </div>
+          <div>
+            <div class="hero-col-label">Goal</div>
+            <div class="hero-col-body">Activate those insights into a queryable, confidence-graded research asset library that drops straight into a PRD, so product decisions are grounded in evidence.</div>
+          </div>
         </div>
         <div class="hero-col">
           <div class="hero-col-label">Technical approach</div>
