@@ -112,9 +112,22 @@
     .hero-credit a:hover {
       color: #8BBDF0; text-decoration: underline;
     }
-    .hero-sub {
-      font-size: 14.5px; color: rgba(255,255,255,.58);
-      max-width: 520px; line-height: 1.65; margin-bottom: 28px;
+    .hero-cols {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px; align-items: start;
+      margin: 18px 0 28px;
+    }
+    .hero-col-label {
+      font-size: 13px; font-weight: 700; color: #6BA8E8;
+      text-transform: uppercase; letter-spacing: 0.6px;
+      margin-bottom: 7px;
+    }
+    .hero-col-body {
+      font-size: 14px; color: rgba(255,255,255,.58);
+      line-height: 1.5; font-weight: 400;
+    }
+    @media (max-width: 680px) {
+      .hero-cols { grid-template-columns: 1fr; gap: 20px; }
     }
     .hero-stats { display: flex; gap: 10px; flex-wrap: wrap; }
     .hero-stat {
@@ -739,7 +752,20 @@
         <h1 class="hero-title">Insight Activation Hub</h1>
         <span class="hero-credit">| Builder: Jenny Wu · <a href="mailto:JennyWuBos@gmail.com">JennyWuBos@gmail.com</a></span>
       </div>
-      <p class="hero-sub">Research insights, activated — evidence-backed answers for product decisions</p>
+      <div class="hero-cols">
+        <div class="hero-col">
+          <div class="hero-col-label">Problem</div>
+          <div class="hero-col-body">Research insights are trapped in scattered reports (Word/PDF/PPT), while product teams can't easily find them, trust them, and use them.</div>
+        </div>
+        <div class="hero-col">
+          <div class="hero-col-label">Goal</div>
+          <div class="hero-col-body">Activate those insights into a queryable, confidence-graded research asset library that drops straight into a PRD, so product decisions are grounded in evidence.</div>
+        </div>
+        <div class="hero-col">
+          <div class="hero-col-label">Technical approach</div>
+          <div class="hero-col-body">Use an LLM for schema-constrained information extraction from research reports (each insight bound to a source quote to prevent hallucination, confidence set by triangulation across studies, human-in-the-loop review before it lands in the database), layered with RAG semantic retrieval to power AI Q&amp;A, coverage-gap analysis, and one-click copy-to-PRD.</div>
+        </div>
+      </div>
       <div class="hero-stats">
         <div class="hero-stat">
           <div class="hero-stat-val" id="stat-insights">—</div>
